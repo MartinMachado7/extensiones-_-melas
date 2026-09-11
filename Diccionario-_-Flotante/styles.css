@@ -1,0 +1,75 @@
+.diccionario-popup-floater {
+  position: absolute;
+  z-index: 2147483647;
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+
+  /* Ancho y alto fluidos */
+  width: min(90vw, 480px);  /* Toma el 90% del ancho de la pantalla hasta un máximo de 420px */
+  max-height: 50vh;          /* Máximo el 50% de la altura visible de la pestaña */
+  overflow-y: auto;          /* Habilita barra de desplazamiento si el texto supera la altura */
+}
+
+/* Encabezado con contenedor Flex para alinear título y logo */
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #630909;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.popup-header strong {
+  color: #111827;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+/* Logo de la extensión en la esquina superior derecha */
+.popup-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Contenido del texto */
+.diccionario-popup-floater p {
+  margin: 0 0 12px 0;
+  color: #374151;
+}
+
+/* Enlace a la fuente oficial */
+.diccionario-popup-floater a.fuente-link {
+  display: inline-block;
+  color: #630909;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #eff6ff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #bfdbfe;
+}
+
+.diccionario-popup-floater a.fuente-link:hover {
+  background-color: #dbeafe;
+}
+
+/* Adaptación para pantallas táctiles/teléfonos pequeños */
+@media (max-width: 480px) {
+  .diccionario-popup-floater {
+    padding: 12px;
+    font-size: 13px;
+  }
+}

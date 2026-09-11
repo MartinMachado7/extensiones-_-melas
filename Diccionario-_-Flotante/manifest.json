@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Diccionario Flotante",
+  "version": "1.0",
+  "description": "Muestra la definición y fuente oficial de lo que subrayas.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "diccionario-flotante@ejemplo.com"
+    }
+  },
+  "icons": {
+    "48": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["logo.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
